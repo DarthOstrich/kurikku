@@ -35,6 +35,11 @@ const Layout = ({ children }) => {
               </Link>
             </div>
             <div className="navbar-item">
+              <Link href="/account">
+                <a>Account</a>
+              </Link>
+            </div>
+            <div className="navbar-item">
               {!isLoading &&
                 (isAuthenticated ? (
                   <button

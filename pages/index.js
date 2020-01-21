@@ -2,9 +2,9 @@ import React from 'react';
 
 const Index = () => {
   return (
-    <div>
-      <p>Index page</p>
-    </div>
+    <section className="section">
+      <h1 className="title">Welcome to kurikku</h1>
+    </section>
   );
 };
 
