@@ -3,9 +3,11 @@ import PropTypes from 'prop-types';
 
 const Dashboard = props => {
   return (
-    <div>
-      <p>Dashboard</p>
-    </div>
+    <>
+      <section className="section">
+        <h1 className="title">Dashboard</h1>
+      </section>
+    </>
   );
 };
 
