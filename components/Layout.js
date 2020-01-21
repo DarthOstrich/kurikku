@@ -23,25 +23,7 @@ const Layout = ({ children }) => {
               </Link>
             </div>
           </div>
-          <div className="navbar-menu is-active">
-            <div className="navbar-item">
-              {!isLoading &&
-                (isAuthenticated ? (
-                  <button
-                    onClick={() =>
-                      logout({ returnTo: 'http://localhost:3000' })
-                    }>
-                    Log out
-                  </button>
-                ) : (
-                  <button
-                    onClick={() =>
-                      login({ appState: { returnTo: { pathname, query } } })
-                    }>
-                    Log in
-                  </button>
-                ))}
-            </div>
+          <div className="navbar-menu navbar-end is-active">
             <div className="navbar-item">
               <Link href="/campaigns">
                 <a>Campaigns</a>
@@ -51,6 +33,26 @@ const Layout = ({ children }) => {
               <Link href="/dashboard">
                 <a>Dashboard</a>
               </Link>
+            </div>
+            <div className="navbar-item">
+              {!isLoading &&
+                (isAuthenticated ? (
+                  <button
+                    className="button"
+                    onClick={() =>
+                      logout({ returnTo: 'http://localhost:3000' })
+                    }>
+                    Log out
+                  </button>
+                ) : (
+                  <button
+                    className="button"
+                    onClick={() =>
+                      login({ appState: { returnTo: { pathname, query } } })
+                    }>
+                    Log in
+                  </button>
+                ))}
             </div>
           </div>
         </nav>
