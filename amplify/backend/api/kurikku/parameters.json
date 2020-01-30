@@ -1,0 +1,11 @@
+{
+    "AppSyncApiName": "kurikku",
+    "DynamoDBBillingMode": "PAY_PER_REQUEST",
+    "DynamoDBEnableServerSideEncryption": "false",
+    "AuthCognitoUserPoolId": {
+        "Fn::GetAtt": [
+            "authkurikku1670a9a9",
+            "Outputs.UserPoolId"
+        ]
+    }
+}

@@ -18,5 +18,22 @@
 			"customAuth": false
 		}
 	},
-	"function": {}
+	"function": {},
+	"api": {
+		"kurikku": {
+			"service": "AppSync",
+			"providerPlugin": "awscloudformation",
+			"output": {
+				"authConfig": {
+					"additionalAuthenticationProviders": [],
+					"defaultAuthentication": {
+						"authenticationType": "AMAZON_COGNITO_USER_POOLS",
+						"userPoolConfig": {
+							"userPoolId": "authkurikku1670a9a9"
+						}
+					}
+				}
+			}
+		}
+	}
 }
