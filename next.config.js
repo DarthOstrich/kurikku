@@ -1,11 +1,13 @@
 require('dotenv').config();
-// required to avoid issue with CSS not being imported correctly for aws-amplify
-if (typeof require !== 'undefined') {
-  require.extensions['.less'] = () => {};
-  require.extensions['.css'] = file => {};
-}
+// solution to fixing aws-amplify-react
+// global.navigator = () => null;
+// if (typeof require !== 'undefined') {
+//   require.extensions['.less'] = () => {};
+//   require.extensions['.css'] = file => {};
+// }
 const withSass = require('@zeit/next-sass');
 const withCSS = require('@zeit/next-css');
+// const withCSS = require('@zeit/next-css');
 module.exports = withCSS(
   withSass({
     env: {

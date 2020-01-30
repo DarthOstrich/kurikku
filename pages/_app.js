@@ -2,7 +2,7 @@ import React from 'react';
 import Layout from '../components/Layout';
 import Amplify, { Auth } from 'aws-amplify';
 import awsconfig from '../src/aws-exports';
-import { withAuthenticator } from 'aws-amplify-react';
+import { withAuthenticator } from 'aws-amplify-react-jz';
 
 Amplify.configure(awsconfig);
 
