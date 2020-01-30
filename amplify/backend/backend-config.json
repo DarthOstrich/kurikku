@@ -6,11 +6,11 @@
 		}
 	},
 	"auth": {
-		"kurikku24b1ca42": {
+		"kurikku6badf809": {
 			"service": "Cognito",
 			"providerPlugin": "awscloudformation",
-			"dependsOn": [],
-			"customAuth": false
+			"dependsOn": []
 		}
-	}
+	},
+	"function": {}
 }
