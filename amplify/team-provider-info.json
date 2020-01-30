@@ -10,6 +10,11 @@
             "StackName": "amplify-kurikku-dev-94118",
             "StackId": "arn:aws:cloudformation:us-east-1:490245071775:stack/amplify-kurikku-dev-94118/b9c98860-4387-11ea-84a7-121fa677fe9a",
             "AmplifyAppId": "d2n3t7w0h9o26y"
+        },
+        "categories": {
+            "auth": {
+                "kurikku24b1ca42": {}
+            }
         }
     }
 }
