@@ -2,10 +2,7 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import Link from 'next/link';
 
-import { withLoginRequired, withAuth } from 'use-auth0-hooks';
-
-const Account = ({ auth }) => {
-  const { user } = auth;
+const Account = props => {
   return (
     <>
       <section className="section">
@@ -33,4 +30,4 @@ const Account = ({ auth }) => {
 
 Account.propTypes = {};
 
-export default withLoginRequired(withAuth(Account));
+export default Account;

@@ -1,15 +1,12 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import { withAuth, withLoginRequired } from 'use-auth0-hooks';
 
-const Dashboard = ({ auth }) => {
-  const { user } = auth;
-  const { sub: authUserID } = user;
+const Dashboard = props => {
   return (
     <>
       <section className="section">
         <h1 className="title">Dashboard</h1>
-        <p>Welcome back: {user.given_name}</p>
+        <p>Welcome back: </p>
       </section>
     </>
   );
@@ -17,4 +14,4 @@ const Dashboard = ({ auth }) => {
 
 Dashboard.propTypes = {};
 
-export default withLoginRequired(withAuth(Dashboard));
+export default Dashboard;
