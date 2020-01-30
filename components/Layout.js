@@ -3,11 +3,10 @@ import '../styles/styles.sass';
 import Link from 'next/link';
 import { useRouter } from 'next/router';
 
-import { useAuth } from 'use-auth0-hooks';
-
 const Layout = ({ children }) => {
   const { pathname, query } = useRouter();
-  const { isAuthenticated, isLoading, login, logout } = useAuth();
+  const isLoading = true;
+  const isAuthenticated = false;
 
   return (
     <div>
@@ -50,11 +49,7 @@ const Layout = ({ children }) => {
                     Log out
                   </button>
                 ) : (
-                  <button
-                    className="button"
-                    onClick={() =>
-                      login({ appState: { returnTo: { pathname, query } } })
-                    }>
+                  <button className="button" onClick={() => {}}>
                     Log in
                   </button>
                 ))}

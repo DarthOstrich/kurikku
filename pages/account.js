@@ -9,9 +9,9 @@ const Account = props => {
         <h1 className="title">Account</h1>
         <h2 className="title is-4">Personal Info</h2>
         <h3 className="title is-5">First Name</h3>
-        <p>{user.given_name}</p>
+        {/* <p>{user.given_name}</p> */}
         <h3 className="title is-5">Last Name</h3>
-        <p>{user.family_name}</p>
+        {/* <p>{user.family_name}</p> */}
       </section>
       <section className="section">
         <h2 className="title is-4">Agency Info</h2>

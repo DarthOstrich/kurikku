@@ -1,0 +1,15 @@
+{
+    "dev": {
+        "awscloudformation": {
+            "AuthRoleName": "amplify-kurikku-dev-94118-authRole",
+            "UnauthRoleArn": "arn:aws:iam::490245071775:role/amplify-kurikku-dev-94118-unauthRole",
+            "AuthRoleArn": "arn:aws:iam::490245071775:role/amplify-kurikku-dev-94118-authRole",
+            "Region": "us-east-1",
+            "DeploymentBucketName": "amplify-kurikku-dev-94118-deployment",
+            "UnauthRoleName": "amplify-kurikku-dev-94118-unauthRole",
+            "StackName": "amplify-kurikku-dev-94118",
+            "StackId": "arn:aws:cloudformation:us-east-1:490245071775:stack/amplify-kurikku-dev-94118/b9c98860-4387-11ea-84a7-121fa677fe9a",
+            "AmplifyAppId": "d2n3t7w0h9o26y"
+        }
+    }
+}

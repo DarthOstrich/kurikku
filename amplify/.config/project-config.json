@@ -1,0 +1,15 @@
+{
+  "projectName": "kurikku",
+  "version": "3.0",
+  "frontend": "javascript",
+  "javascript": {
+    "framework": "react",
+    "config": {
+      "SourceDir": "src",
+      "DistributionDir": "out",
+      "BuildCommand": "npm run export",
+      "StartCommand": "npm run start"
+    }
+  },
+  "providers": ["awscloudformation"]
+}
