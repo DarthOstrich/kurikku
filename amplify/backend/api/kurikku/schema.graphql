@@ -1,19 +1,50 @@
-type Task 
-  @model 
-  @auth(rules: [
-      {allow: groups, groups: ["Managers"], queries: null, mutations: [create, update, delete]},
-      {allow: groups, groups: ["Employees"], queries: [get, list], mutations: null}
-    ])
-{
+enum Role {
+  ADMIN
+}
+
+type User @model @auth(rules: [{ allow: owner }]) {
+  id: ID!
+  cognitoID: String!
+  agency: Agency @connection
+  role: Role!
+}
+
+type Agency @model {
+  id: ID!
+  title: String!
+}
+
+type Campaign @model {
+  id: ID!
+  title: String!
+  active: Boolean!
+  agency: Agency @connection
+}
+
+type Task
+  @model
+  @auth(
+    rules: [
+      {
+        allow: groups
+        groups: ["Managers"]
+        queries: null
+        mutations: [create, update, delete]
+      }
+      {
+        allow: groups
+        groups: ["Employees"]
+        queries: [get, list]
+        mutations: null
+      }
+    ]
+  ) {
   id: ID!
   title: String!
   description: String
   status: String
 }
-type PrivateNote
-  @model
-  @auth(rules: [{allow: owner}])
-{
+type PrivateNote @model @auth(rules: [{ allow: owner }]) {
   id: ID!
   content: String!
 }
