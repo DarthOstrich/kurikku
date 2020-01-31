@@ -2,7 +2,7 @@ import React, { useEffect } from 'react';
 import Layout from '../components/Layout';
 import Amplify, { Auth, Hub, API, graphqlOperation } from 'aws-amplify';
 import awsconfig from '../src/aws-exports';
-import { withAuthenticator } from 'aws-amplify-react-jz';
+import { withAuthenticator } from 'aws-amplify-react-jz'; // using this because main repo is BROKE
 
 import * as mutations from '../src/graphql/mutations';
 
@@ -31,7 +31,6 @@ const App = ({ Component, pageProps }) => {
             console.log(data);
           })
           .catch(err => console.error(err));
-        console.log(newUser);
         // API.graphql(graphqlOperation(mutations.createUser, userDetails))
         //   .then(data => {
         //     console.log(data);
